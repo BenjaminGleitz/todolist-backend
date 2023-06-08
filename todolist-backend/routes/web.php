@@ -26,3 +26,9 @@ $router->get('/categories', [
 ]);
 
 $router->get('/categories/{categoryId}', 'CategoryController@item');
+
+$router->get('/tasks', [
+    'as' => 'task-list', 'uses' => 'TaskController@list'
+]);
+
+$router->get('/tasks/{taskId}', 'TaskController@item');
