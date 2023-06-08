@@ -37,7 +37,7 @@ class CategoryController extends Controller
         // return response()->json($categoriesList);
 
         // On utilise notre méthode utilitaire pour retourner la liste des catégories
-        return response()->json($categoriesList);
+        return $this->sendJsonResponse($categoriesList);
     }
 
     /**
@@ -53,5 +53,8 @@ class CategoryController extends Controller
       if ($categoryById === null) {
         abort(404);
       }
+
+      
+      return response()->json($categoryById);
     }
 }
