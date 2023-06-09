@@ -30,8 +30,8 @@ class Category extends Model
     //  => on a donc une relation de type One to Many
     //
     // https://laravel.com/docs/6.x/eloquent-relationships#one-to-many
-    public function categories()
+    public function tasks()
     {
-        return $this->belongsTo('App\Models\Category');
+        return $this->hasMany('App\Models\Task');
     }
 }

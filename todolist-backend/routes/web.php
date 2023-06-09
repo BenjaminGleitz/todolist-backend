@@ -21,11 +21,22 @@ $router->get('/', [
     'as' => 'main-home', 'uses' => 'MainController@home'
 ]);
 
+// ! CATEGORIES
+
 $router->get('/categories', [
     'as' => 'category-list', 'uses' => 'CategoryController@list'
 ]);
 
 $router->get('/categories/{categoryId}', 'CategoryController@item');
+
+$router->post('/categories', 'CategoryController@add');
+
+$router->put('/categories/{categoryId}', 'CategoryController@update');
+
+$router->delete('/categories/{categoryId}', 'CategoryController@delete');
+
+
+// ! TACHES
 
 $router->get('/tasks', [
     'as' => 'task-list', 'uses' => 'TaskController@list'
