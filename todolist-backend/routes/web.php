@@ -43,3 +43,9 @@ $router->get('/tasks', [
 ]);
 
 $router->get('/tasks/{taskId}', 'TaskController@item');
+
+$router->post('/tasks', 'TaskController@add');
+
+$router->put('/tasks/{taskId}', 'TaskController@update');
+
+$router->delete('/tasks/{taskId}', 'TaskController@delete');
